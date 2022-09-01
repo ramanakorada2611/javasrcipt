@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <p><center><u>FUNCTIONS</u></center></p>
+    <script src="./style.js"></script>
+    <span>1.Create one function with zero parameter having a console statement</span>
+    <pre>function func(){
+        console.log("hello world!!")
+    }
+    func();</pre>
+    <span>2.Create one function which takes two values as a parameter and print the sum of numbers</span>
+    <pre>function func(a,b){
+        console.log("hello world!!");
+        return a+b;
+    }
+    let add=func(3,4);
+    console.log(add);</pre>
+    <span>3.create one arrow function</span>
+    <pre>let func=(n)=>{
+        for(let i=1;i<=n;i++)
+        console.log(i)
+    }
+    func(4)</pre><hr>
+    <pre>var x=21;
+        var girl = function(){
+            console.log(x);
+            var x=20;
+        }
+        girl();</pre>
+        <span><u>Output</u>:undefined</span><hr>
+        <pre>var x=21;
+            girl();
+            console.log(x);
+            function girl(){
+                console.log(x)
+                var x=20;
+            }</pre>
+            <span><u>Output</u>:undefined<br>21</span><hr>
+            <pre>var x = 21;
+                a();
+                b();
+                console.log(a);
+                a = function() {
+                    
+                   x = 20;
+                  console.log(x);
+                };
+                b = function() {
+                    
+                    x = 40;
+                   console.log(x);
+                }</pre>
+                <span><u>Output:</u>a is not defined</span><hr>
+                <span>7.Write a function that accepts parameters n and returns factorial of n</span>
+                <pre>function func(n){
+                    let fact=1;
+                    for(let i=1;i<=n;i++){
+                        fact=fact*i
+                    }console.log(fact)
+                }
+                func(5)</pre>
+</body>
+</html>
