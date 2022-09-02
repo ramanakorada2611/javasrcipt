@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handson3</title>
+    <style>
+        span{
+            background-color: black;
+            color:aqua;
+        }
+        pre{
+            background-color: black;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <span>1.Find the number of digits</span>
+    <pre>const Find_Digits = (N) => 
+        {
+             let count=0;
+             while(N!=0){
+               N=parseInt(N/10);
+               count=count+1;
+             }return count
+        };</pre>
+    <span>2.Find the Fives</span>
+    <pre>const Find_Five = (n) => 
+        {
+             let count=0;
+             while(n!=0){
+               let digit=n%10;
+               if(digit==5){
+                 count++
+               }n=parseInt(n/10);
+             }return count;
+        };</pre>
+    <span>3Find even Sum</span>
+    <pre>const findSum = (n) => {
+        let sum=0;
+        for(i=1;i<=n;i++){
+          if(i%2==0){
+            sum=sum+i;
+          }
+        }return sum;
+    }; </pre>
+    <span>4.Find the digits sum of a number</span>
+    <pre>const Number_Sum = (n) => 
+        {    
+          let sum=0;
+          while(n!=0){
+            let digit=n%10;
+            sum=sum+digit;
+            n=parseInt(n/10)
+          }return sum
+        };</pre>
+    <span>5.Print the Odds</span>
+    <pre>const Print_Odd = (n) => 
+        {
+        let a=2;
+        console.log(a)
+        for(let i=3;i<=n;i+=2)
+        console.log(i)
+        };</pre>
+    <span>6.Print the Pattern</span>
+    <pre>const Print_pattern = (N) => 
+        {
+         let str="";
+         for(let i=1;i<=N;i++){
+           for(let j=1;j<=i;j++){
+             str+="*"
+           }str+="\n"
+         }console.log(str)
+        };</pre>
+    <span>7.Check if the number is Prime or not</span>
+    <pre>const Prime_Check = (N) => 
+        { let count=0;
+             for(let i=1;i<=N;i++)
+             {
+             if(N%i==0){
+               count++
+              }
+             }if(count==2){
+               return "YES";
+             }
+             else{
+               return "NO";
+             }
+        };</pre>
+    <span>8. Print Numbers</span>
+    <pre>const printNumbers = (n) => {
+        for(let i=1;i<=n;i++) {
+          console.log(i)
+        }
+     };</pre>
+    <span>9.Print the Table</span>
+    <pre>
+        const Print_Table = (N) => 
+{
+	for(let i=1;i<=10;i++){
+	  console.log(N+ " * " + i + " = " + (N*i))
+	}
+};
+    </pre>
+</body>
+</html>
