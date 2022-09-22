@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <p>1.Write the code to access element which is having id as "text"</p>
+    <p id="text">Hello world!</p>
+    <pre>Ans:let text=document.getElementById("text")
+        console.log(text)</pre>
+<br>
+    <p>2.Write the code to access element which is having tag as "h1"</p>
+    <h1>hello world!</h1>
+    <pre>Ans:let heading=document.getElementsByTagName("h1")[0]
+        console.log(heading)</pre>
+<br>
+    <p>3.Write the code to access element which is having class as "box"</p>
+    <p class="box">hello world!</p>
+    <pre>
+        Ans:let box=document.getElementsByClassName("box")[0]
+        console.log(box)
+    </pre>
+<br>
+    <p>4.Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</p>
+    <h1 id="change">hello</h1>
+    <pre>
+        Ans:let p=document.getElementById("change")
+        p.innerText="hello world!"
+        console.log(p.innerText)
+    </pre>
+<br>
+     <p>5.Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</p>
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+    </div>
+    <button onclick="excute()" class="click">click me</button>
+<pre>
+    Ans:function excute(){
+        let ele=document.getElementsByClassName("flex-container")[0]
+        let button=document.getElementsByClassName("click")[0]
+        if(ele.style.flexDirection=="column"){
+           ele.style.flexDirection="row"
+        }else{
+           ele.style.flexDirection="column"
+        }
+     }
+</pre>
+<br>
+     <p>6.What’s the difference between window vs document?</p>
+    <table border="2px" cellpadding="0px" cellspacing="0px" width="50%">
+        <tr>
+            <th>window</th>
+            <th>document</th>
+        </tr>
+        <tr>
+            <td>window is the execution context and global object for that context's JavaScript</td>
+            <td>document contains the DOM, initialized by parsing HTML</td>
+        </tr>
+        <tr>
+            <td>Each browser tab has its own top-level window object. Each element has its own window object too, nested within a parent window. Each of these windows gets its own separate global object.</td>
+            <td>Each window object has a document object to be rendered. These objects get confused in part because HTML elements are added to the global object when assigned a unique id.</td>
+        </tr>
+        <tr>
+            <td>setTimeout() and setInterval() binding event handlers to a timer
+                location giving the current URL
+                history with methods back() and forward() giving the tab's mutable history
+                navigator describing the browser software</td>
+                <td>E.g.,
+                    window.holyCow or window["holyCow"]
+                    document.getElementById("holyCow")
+                    document.querySelector("#holyCow")
+                    document.body.firstChild
+                    document.body.children[0]</td>
+        </tr>
+    </table>
+    <pre>
+        Ans:let head=document.getElementById("Heading")
+        head.style.color="red"
+        head.style.backgroundColor="black"
+        head.style.display="inline-block"
+    </pre>
+    <br>
+    <p>7.Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</p>
+    <h1 id="Heading">Hello!</h1>
+    <p>8.Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+   <p id="para">hello world</p>
+   <button onclick="fun()" id="but">Replace Text</button>
+   <pre>
+    Ans:
+    function fun(){
+       let x=document.getElementById("para")
+       let y=document.getElementById("but")
+     if(x.innerText=="hello world")
+     {
+        x.innerText="Welcome to Eleavtion Academy"
+        x.style.color="aqua"
+        x.style.backgroundColor="black"
+        x.style.display="inline-block"
+     }
+     else{
+        x.innerText="hello world"
+        x.style.color="yellow"
+        x.style.backgroundColor="black"
+        x.style.display="inline-block"
+     }
+    }
+   </pre>
+<br>
+   <p>9.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+   <h1 id="clock"></h1> 
+   <pre>Ans:
+    function clock(){
+       let time=new Date()
+       let hrs=time.getHours()
+       let mins=time.getMinutes()
+       let sec=time.getSeconds()
+       let tag=document.getElementById("clock")
+       period="AM"
+       if(hrs>=12){
+        period="PM"
+       }
+       if(hrs>12){
+          hrs=hrs%12
+       }
+       if(hrs<10){
+          hrs="0"+hrs
+       }
+       if(mins < 10){
+          mins="0"+mins
+       }
+       if(sec < 10){
+          sec="0"+sec
+       }
+       tag.innerText=+hrs+ " : " +mins+ " : " +sec+" : " +period;
+    }
+    setInterval(clock, 1000);
+   </pre>
+   <br>
+    <p>10.Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</p>
+    <select onchange="funcn()" id="select">
+     <option value="0">2020-2021</option>
+     <option value="1">2021-2022</option>
+     <option value="2">2022-2023</option>
+    </select>
+    <input id="find" type="text">
+    <pre>
+        Ans:function funcn(){
+            let x=document.getElementById("select")
+            let y=x.options[x.options.selectedIndex].text
+            document.getElementById("find").value=y
+         }
+    </pre><br>
+  <p>11."Create a form having name ,email, phone no. , birth year 
+    Add validations - phone no. should start with 91 , it should be 10 digits
+    email should be domain prepbytes.com
+    birth year should be > 95"</p>
+    <form action="#">
+        <label for="name">Name : </label>
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        <label for="email">Email :</label>
+        <input id="email" type="text" placeholder="Enter your email" required><span
+        id="message1"> Domain should be "@prepbytes.com" only</span><br><br>
+        <label for="phone">Phone No:</label>
+        <input id="phone" type="number" placeholder="Enter the phone number"
+        required><span id="message2"> Phone number should start with 91 and must be 10 digits
+        only</span><br><br>
+        <label for="birthYear">Birth Year : </label>
+        <input id="birthYear" type="date" required><span id="message3"> Birth Year should
+        be greater than 1995</span><br><br>
+        <button type="submit" onclick="check()">Submit</button>
+        </form>
+   <pre>Ans:
+    if(result2){
+       msg2.innerText = " Phone Number is Valid"
+       }
+       else{
+       msg2.innerText = " Phone Number is Invalid"
+       }
+       let msg3 = document.getElementById("message3");
+       let year = document.getElementById("birthYear").value;
+       let year1 = parseInt(year.slice(0,4));
+       if(year1 > 1995){
+       msg3.innerText = " Birth Year is valid"
+       }
+       else{
+       msg3.innerText = " Birth Year is Invalid"
+       }</pre>
+    <script src="./index.js"></script>
+</body>
+</html>
