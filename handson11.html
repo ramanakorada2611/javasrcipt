@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array of objects</title>
+    <style>
+        body{
+            background-color: rgb(35, 30, 30)
+        }
+        h1{
+            color:red ;
+        }
+        p{
+            color:darkmagenta
+        }
+        pre{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>handson11 (arrays of ojects)</center></h1>
+   <p>1."Question 1 : We are interested in retrieving only the name of the students and all the names should be in caps.
+
+    ['JOHN', 'BABA', 'YAGA', 'WICK']
+    "</p>
+    <pre>let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ]
+let arr=[]                    
+for(i of studentRecords){
+let a=i.name.toUpperCase()
+arr.push(a)
+}
+console.log(arr)
+</pre><br>
+<p>2."Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+    [{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]"</p>
+<pre>let obj=[{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]
+    let arr1=[]
+    for(let i in obj){
+        let student=obj[i].marks
+        if(student>50){
+            arr1.push(obj[i])
+        }
+    }console.log(arr1)</pre><br>
+<p>3.Question 3: Retrieve the details of students who scored more than 50 marks and have id greater than 120.</p>
+<pre>let obj=[{name: 'John', id: 123, marks : 9 },{name: 'Wick', id: 115, marks : 75 }]
+    let arr=[]
+    for(let i of obj){
+    let x=i.marks
+    let y=i.id
+    if(x>50){
+        console.log(i.name,x)
+    }
+    if(y>120)
+    console.log(i.name,y)
+    }</pre><br>
+<p>4.Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</p>
+<pre>let obj=[{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]
+    sum=0
+    for(let i of obj){
+        let s=i.marks
+        sum+=s
+    }
+    console.log(sum)</pre><br>
+<p>5.Question 5: This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</p>
+<pre>let obj=[{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]
+    for(let i of obj){
+    let x=i.marks
+    let y=i.id
+    if(x>50){
+        console.log(i.name)
+    }
+    }</pre><br>
+<p>6. Question 6: This time we are required to print the sum of marks of the students with id > 120.</p>
+<pre> let obj=[{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 },{name:'ramana',id:121,marks:14}]
+    let sum=0
+    for( let i of obj){
+       let z=i.marks
+       let x=i.id
+       if(x>120){
+           sum+=z
+          
+       }
+    }
+    console.log(sum)</pre><br>
+<p>7.Question 7: This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</p>
+<pre>let obj=[{name: 'John', id: 123, marks : 9 },{name: 'Wick', id: 115, marks : 75 },{name:'ramana',id:121,marks:11}]
+    sum=0;
+    for(let i of obj){
+        let a=i.marks
+        if(a<50){
+           console.log( a+=15)
+        }
+        if(a>50){
+            sum+=a
+        }
+    } 
+    console.log(sum)</pre>
+    <br>
+<p>8.Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </p>
+<pre>let arr=[]
+    let obj1={
+      name:'ramana',
+      class:10,
+      rollno:18
+    }
+    arr.push(obj1)
+    let obj2={
+        name:'ram',
+        class:11,
+        rollno:19
+    }
+    arr.push(obj2)
+    let obj3={
+        name:'maxwell',
+        class:12,
+        rollno:20
+    }
+    arr.push(obj3)
+    let obj4={
+        name:'max',
+        class:'B.tech',
+        rollno:19
+    }
+    arr.push(obj4)
+    let obj5={
+        name:'buttler',
+        class:11,
+        rollno:20
+    }
+    arr.push(obj5)
+    let obj6={
+        name:'smith',
+        class:'Mba',
+        rollno:21
+    }
+    arr.push(obj6)
+    console.log(arr)</pre>
+    <script src="./index.js"></script>
+</body>
+</html>
