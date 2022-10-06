@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+    <style>
+      body{
+        background-color: cadetblue;
+      }
+      h2{
+        color: brown;
+      }
+      p{
+        color: rgb(8, 14, 14);
+      }
+      pre{
+        color:blue
+      }
+    </style>
+</head>
+<body>
+    <h2>1.Difference between “ == “ and “ === “ operators.</h2>
+    <p>Ans:Double equals (==) is a comparison operator, which transforms the operands having the same type before comparison.So, when you compare string with a number, JavaScript converts any string to a number. An empty string is always converts to zero. A string with no numeric value is converts to NaN (Not a Number), which returns false.Both are comparrsion operators(==,===).
+      Double equal to (==) compare the value of data.whereas triple('===') ) is a strict equality comparison operator in JavaScript, which returns false for the values which are not of a similar type. This operator performs type casting for equality. If we compare 2 with “2” using ===, then it will return a false value.compare the value and datatypes of data.
+    </p>
+    <pre>Ex:console.log(9=='9')</pre>
+    <pre>Ex:console.log(9==='9')</pre>
+    <h2>2.What is the spread operator?</h2>
+    <p>Ans:spread operator used for the copy the value and store in the another variable.
+        The spread operator ... is used to expand or spread an iterable or an array.
+    </p>
+    <pre>Examples:let a=[1,2,3,4,5,6,7]
+        b=[0]
+        console.log(...b,...a)//spread operator
+        
+        let x={
+            name:'ramana',
+            age:21
+        }
+        let y=x
+        console.log(y.name,x.age)//sprear operator
+        
+        let arr=['ram','ana','kor','ada']
+        console.log(arr)
+        console.log(...arr)</pre>
+    <h2>3.What are the differences between var, let and const?</h2>
+    <p>Ans:var declarations are globally scoped or function scoped while let and const are block scoped. var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared. </p>
+    <p>Two types 1.Global Execution Context</p>
+    <p>2.Functional Execution Context</p>
+    <pre>Examples:var a=12;
+        var a=13;
+        a++
+        console.log(a)//by using var we can updating  and re declare with same varible
+           
+        let c=12;
+        c++
+        console.log(c)//by using let we can updating the values
+        
+        const d=13;
+        d++
+        console.log(d)// by  using const we can't update or redeclare</pre>
+        <h2>4.What is execution context</h2>
+        <p>Ans:When the JavaScript engine executes the JavaScript code, it creates execution contexts.
+          Each execution context has two phases: the creation phase and the execution phase.
+          The creation phase:
+          When the JavaScript engine executes a script for the first time, it creates the global execution context.
+          The execution phase :
+          During the execution phase, the JavaScript engine executes the code line by line, assigns the values to variables, and executes the function calls.Execution context is the concept for describing the internal working of a code. In JavaScript, the environment that enables the JavaScript code to get executed is what we call JavaScript Execution Context.It is the execution context that decides which code section has access to the functions, variables, and objects used in the code. During the execution context, the specific code gets parsed line by line then the variables and functions are stored in the memory. An execution context is similar to a container that stores variables, and the code gets evaluated and then executed. Thus, it is the execution context that provides an environment for the specific code to get executed.</p>
+        <pre>Ex:let x = 'Hello World!';  
+            function a() {  
+              console.log('It is the first function');  
+            function b() {  
+              console.log('It is the second function');  
+            }  
+            b();  
+            }  
+            a();  
+            console.log('It is GEC',x)</pre>
+        <h2>5.what is meant by first call function ?</h2>
+        <p>The functions in that language are treated like other variables.
+           functions can be assigned by any other variable.
+          functions can be passed as an argument.
+           functions can be returned from another function.</p>
+           <pre>Ex:function call(a,b){
+            let c=a+b
+            console.log(c)
+        }
+        call(1,2)</pre>
+        <h2>6.what are closures?Give an example for closures</h2>
+        <p>Ans:A closure gives you access to an outer function scope from inner function</p>
+        <pre>Ex:function outer(){
+          let a=20
+      function inner(){
+          console.log(a)
+      }
+      inner()
+      }
+      outer()</pre>
+      <h2>7.Explain call(),apply(),Bind() methods ? Give an example of call(),apply(),Bind() methods</h2>
+      <p>These are just different way of calling or invoking a function.
+        when you are calling a function using any of these then you Document
+        have to define in the function that the first argument will be an object.
+The call() method is a predefined JavaScript method.
+        It can be used to invoke (call) a method with an owner object as an argument (parameter).</p>
+        <p>he apply() method is similar to the call() method</p>
+        <p>With the bind() method, an object can borrow a method from another object.When you pass a method an object is to another function as a callback, the this is lost.</p>
+        <pre>Examples:function test(a,b){
+          console.log(a+b)
+          console.log(this)
+      }
+      test.call({name:'ramana'},10,23)//call method argument will be passed individually
+    
+      function test(a,b){
+        console.log(a+b)
+        console.log(this)
+    }
+    test.apply({name:'ramana'},[10,23])//apply method argument willbe passed like array format
+  
+    let b1={
+      x:21,
+      y:23
+  }
+  let b2={
+      x:34,
+      y:56
+  }
+  function call(){
+      console.log(this.x+','+this.y)
+      console.log(this)
+  }
+  
+  let fun1=call.bind(b1)
+  let fun2=call.bind(b2)
+  
+  fun1()
+  fun2()
+  </pre>
+    <script src="./index.js"></script>
+</body>
+</html>
