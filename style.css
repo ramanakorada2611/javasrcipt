@@ -1,27 +1,349 @@
- .flex-container{
+ body{
+    background-color:#3D087B;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+.clock{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+.box1{
     display: flex;
-    flex-direction:row;
+    flex-flow: column;
+    width: 350px;
+    height: 250px;
+    border: 2px solid black;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left:100px;
+    border-radius: 10px;
+}
+.box1:hover{
+    border: 2px solid blue;
+}
+
+.firstline ul li {
+list-style-type: none;
+display: inline-block;
+margin: 10px;
+position: relative;
+top: -30px;
+}
+.sun{
+    position: relative;
+    top:12px;
+    left: -35px;
+}
+option{
+    color: blue;
+    width: 90px;
+}
+select:hover{
+    border: 1px solid blue;
+}
+.matter{
+    color: black;
+    position: absolute;
+    left: -50px;
+}
+.matter:hover{
+    border: 1px solid blue;
+}
+.secondline ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    top: -60px;
+    }
+.thirdline ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    top: -80px;
+  }
+  .fourthline ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    top: -100px;
+  }
+  .image2{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:12px;
+    left: -35px;
+}
+
+.modify{
+    position: relative;
+    left: -70px;
+   height: 30px;
+   border-radius: 5px;
+}
+.index2{
+    width: 230px;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    left:75px;
+    background-color: rgb(122, 3, 122);
+    border-radius: 5px;
+}
+.index3{
+    width: 275px;
+    height: 30px;
+    position: absolute;
+    top: 93px;
+    left:60px;
+    background-color: rgb(247, 198, 247);
+    border-radius: 5px;
+   
+}
+.index4{
+    width: 350px;
+    height: 90px;
+    position: absolute;
+    top: 25px;
+    left:25px;
+    background-color: white;
+    border-radius: 5px;
+}
+.box3{
+    width: 350px;
+    height: 50px;
+    background-color:white;
+    position: relative;
+    left:100px;
+    top: 370px;
+    border-radius: 5px;
+    font-family:cursive;
+    color: #3D087B;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4{
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+}
+.box4{
+    width: 350px;
+    height: 50px;
+    background-color:white;
+    position: absolute;
+    top: 170px;
+    left: 600px;
+    border-radius: 5px;
+    font-family:cursive;
+    color: #3D087B;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box5{
+    width: 350px;
+    height: 265px;
+    background-color: white;
+    position: relative;
+    top:250px;
+    left:600px;
+    border-radius: 5px;
+}
+.bomma{
+    width: 350px;
+    height: 265px;
+
+}
+ .content div{
+display: inline-block;
+margin: 10px;
+background-color: violet;
+ }
+.time{
+    width: 30px;
+    height: 40px;
+    background-image: linear-gradient(to bottom,rgb(116, 2, 116),white); 
+} 
+ .clock1{
+    background-color:#3D087B ;
+    color:white;
+    display: inline;
+    border-radius: 5px;
+    position: absolute;
+    left:610px;
+    top:17px;
+    
+}  
+ .click{
+    background-image: linear-gradient(to right, rgb(103, 8, 144),violet);
+    height:30px; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0%;
+}
+
+#id{
+ display: inline-block;
+margin: 10px;
+background-color: violet;
+
+}
+.flex{
+    display: flex;
+    background-color: white;
+    width:400px;
+    height: 70px;
+    position: absolute;
+    top: 40px;
+    left:590px;
+    border-radius: 5px;
+
 }
 .flex-item{
-    margin: 30px;
-    width: 100px;
-    height: 100px;
-    background-color: aquamarine;
+    width:100px;
+    height: 50px;
+    background-color: rgb(247, 204, 247);
+    margin: 10px;
+    color: #5a0bb4;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 25px;
+    
+   
 }
-.click{
-    background-color: blue;
+.flex-item1{
+    width:200px;
+    height: 50px;
+    background-color: rgb(247, 204, 247);
+    margin: 10px;
+    color: #5a0bb4;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 25px;
+   
+
+   
+}
+.flex-item2{
+    width:200px;
+    height: 50px;
+    background-color: rgb(247, 204, 247);
+    margin: 10px;
+    color: #5a0bb4;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+.flex-item3{
+    width:100px;
+    height: 50px;
+    background-color: #ba8ded;
+    margin: 10px;
+    color: #5a0bb4;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 25px;
+   
+}   
+.back{
+   width:400px;
+   height: 50px;
+   box-shadow: 5px 5px 1px rgb(227, 6, 227);
+   border-radius: 10px;
+   opacity: 0.7;
+   background-color: aliceblue;
+   float: right;
+   box-sizing: border-box;
+   position: relative;
+   top:65px;
+  left:-239px;
+}
+.list{
+    width: 230px;
+    height: 90px;
+    background-color:#5a0bb4; 
     color: aliceblue;
-    width: 100px;
-    height: 30px;
+    position: relative;
+    left:220px;
+    top: 120px;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    padding: 2px;
+   
 }
-#clock{
-    color: aquamarine;
-    background-color: black;
-    display: inline-block;
-    font-size: 30px;
+.list ul li{
+    list-style-type: none;
+}
+.set{
+    width:100px;
+    height: 30px;
+    background-image: linear-gradient(to right,white,#5a0bb4);
+    border: none;
+    position: relative;
+    left:100px;
+    top:130px;
+}
+.set:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right,#5a0bb4,white);
+    
+}
+.dot1{
+    position: relative;
+    top: 10px;
+    left:-10px;
+    color: #5a0bb4;
+    font-size: 40px;
+}
+.dot2{
+    position: relative;
+    top: 10px;
+    left:-15px;
+    color: #5a0bb4;
+    font-size: 40px;
+}
+.dot3{
+    position: relative;
+    top: 10px;
+    left:-15px;
+    color: #5a0bb4;
+    font-size: 40px;
+}
+.extra1{
+    position: relative;
+    top: 40px;
+    left: -36px;
+}
+.extra2{
+    position: relative;
+    top: 40px;
+    left: -45px;
+}
+.extra3{
+    position: relative;
+    top: 40px;
+    left: -43px;
 } 
-
-
+#find{
+width:200px;
+height: 80px;
+color:rgb(240, 243, 248);
+position: relative;
+top:100px;
+left:245px;
+background-color: #4a0895;
+border-radius: 5px;
+}

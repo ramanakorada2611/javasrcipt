@@ -1,96 +1,129 @@
 
-let text=document.getElementById("text")
-console.log(text)
-
-let heading=document.getElementsByTagName("h1")[0]
-console.log(heading)
-
-let box=document.getElementsByClassName("box")[0]
-console.log(box)
-
-let p=document.getElementById("change")
-p.innerText="hello world!"
-console.log(p.innerText)
-
-
-function excute(){
-   let ele=document.getElementsByClassName("flex-container")[0]
-   let button=document.getElementsByClassName("click")[0]
-   if(ele.style.flexDirection=="column"){
-      ele.style.flexDirection="row"
-   }else{
-      ele.style.flexDirection="column"
-   }
-}
-
-let head=document.getElementById("Heading")
-head.style.color="red"
-head.style.backgroundColor="black"
-head.style.display="inline-block"
-
-function fun(){
-   let x=document.getElementById("para")
-   let y=document.getElementById("but")
- if(x.innerText=="hello world")
- {
-    x.innerText="Welcome to Eleavtion Academy"
-    x.style.color="aqua"
-    x.style.backgroundColor="black"
-    x.style.display="inline-block"
- }
- else{
-    x.innerText="hello world"
-    x.style.color="yellow"
-    x.style.backgroundColor="black"
-    x.style.display="inline-block"
- }
-}
-
-function clock(){
-   let time=new Date()
-   let hrs=time.getHours()
-   let mins=time.getMinutes()
-   let sec=time.getSeconds()
-   let tag=document.getElementById("clock")
-   period="AM"
-   if(hrs>=12){
-    period="PM"
-   }
-   if(hrs>12){
-      hrs=hrs%12
-   }
+function flex(){
+    let time=new Date()
+    let hrs=time.getHours()
+    let mins=time.getMinutes()
+    let sec=time.getSeconds()
+    let period=hrs>=12 ?'PM':'AM'
+    hrs=(hrs%12)||12
+   mins=mins<10?'0'+mins:mins
    if(hrs<10){
-      hrs="0"+hrs
+    hrs='0'+hrs
    }
-   if(mins<10){
-      mins="0"+mins
+    if(sec<10){
+        sec='0'+sec
+    }
+    document.getElementsByClassName("flex-item")[0].innerText=hrs
+    document.getElementsByClassName("flex-item1")[0].innerText=mins
+    document.getElementsByClassName("flex-item2")[0].innerText=sec
+    document.getElementsByClassName("flex-item3")[0].innerText=period
+   if(period=="AM"){
+    document.getElementsByClassName('bomma')[0].src="./change.png"
+    document.getElementsByClassName('box4')[0].innerText="GRAB SOME HEALTHY  BREAKFAST!!"
+    document.getElementsByClassName('box3').innerText="GOOD MORNING !! WAKE UP !!"
    }
-   if(sec<10){
-      sec="0"+sec
+   if(hrs>=1&&hrs<=3&&period=="PM"){
+    document.getElementsByClassName('bomma')[0].src="./change2 .png"
+    document.getElementsByClassName('box4')[0].innerText="LET'S HAVE SOME LUNCH !!!"
+    document.getElementsByClassName('box3')[0].innerText="GOOOD AFTERNOON !! TAKE SOME LAUNCH !!"
    }
-   tag.innerText=+hrs+":"+mins+":"+sec+":"+period;
+   if(hrs>=4&&hrs<=7&&period=="PM"){
+    document.getElementsByClassName('bomma')[0].src="./change3.png"
+    document.getElementsByClassName('box4')[0].innerText="STOP YAWNING, GET SOME TEA.. ITS JUST EVENING !!!"
+    document.getElementsByClassName('box3')[0].innerText="GOOOD EVENING !!"
+   }
+   if(hrs>=8&&hrs<=11&&period=="PM"){
+    document.getElementsByClassName('bomma')[0].src="./change4.png"
+    document.getElementsByClassName('box4')[0].innerText="CLOSE YOUR EYES AND GO TO SLEEP !!!"
+    document.getElementsByClassName('box3')[0].innerText="GOOOD NIGHT !!"
+   }
+   setTimeout(flex, 1000);
 }
-setInterval(clock,"1000");
+ flex()
 
-function funcn(){
-   let x=document.getElementById("select")
-   let y=x.options[x.options.selectedIndex].text
-   document.getElementById("find").value=y
-}
+ function fun(){
+    let button=document.getElementById('modify')
+    if(button.innerText=="Set Alaram"){
+        button.innerText="Party Time"
+    }else{
+        button.innerText="Set Alaram" 
+    }
+
+    let x=document.getElementById("drop1")
+    let y=x.options[x.options.selectedIndex].text
+    document.getElementById("find1").innerText=y
+
+    let x1=document.getElementById("drop2")
+    let y1=x1.options[x1.options.selectedIndex].text
+    document.getElementById("find2").innerText=y1
+
+    let x2=document.getElementById("drop3")
+    let y2=x1.options[x2.options.selectedIndex].text
+    document.getElementById("find3").innerText=y2
+
+    let x3=document.getElementById("drop4")
+    let y3=x1.options[x3.options.selectedIndex].text
+    document.getElementById("find4").innerText=y3
+ }
 
 
-if(result2){
-   msg2.innerText = " Phone Number is Valid"
-   }
-   else{
-   msg2.innerText = " Phone Number is Invalid"
-   }
-   let msg3 = document.getElementById("message3");
-   let year = document.getElementById("birthYear").value;
-   let year1 = parseInt(year.slice(0,4));
-   if(year1 > 1995){
-   msg3.innerText = " Birth Year is valid"
-   }
-   else{
-   msg3.innerText = " Birth Year is Invalid"
-   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
