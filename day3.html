@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    body{
+        background-color: chartreuse;
+    }
+    h2{
+color: cornflowerblue;
+    }
+    p{
+        color: rgb(224, 18, 224);
+    }
+    pre{
+        color: darkblue;
+    }
+   </style>
+    <title>Day3</title>
+</head>
+<body>
+    <h2>1.What is the use of setTimeout</h2>
+    <p>Ans:Set timeout is a method that executes the function and statements after some period of time.</p>
+    <pre>Example:setTimeout((a,b) => {
+        console.log(a+b)
+        console.log("hello!")
+    }, 3000,10,20);</pre>
+    <h2>2.What is an event loop and call stack</h2>
+    <p>Ans:Event loop is a mechanism that runs in parallel with the main JavaScript execution cycle. It’s used by many scripts like Web Workers, iframes and XMLHttpRequests. In order to run an event loop, you need to create a function that will be executed continuously until the code inside it returns false.
+        When ever the call stack is empty event loop pushes the code into the call stack from the call back queue.
+    </p>
+    <pre>Example:console.log("ramana")
+        setTimeout(() => {
+            console.log("hello")
+        }, 3000);
+        console.log("korada"</pre>
+    <h2>3.What are arrow functions?</h2>
+    <p>Ans:The handling of this is also different in arrow functions compared to regular functions. In short, with arrow functions there are no binding of this. In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions the this keyword always represents the object that defined the arrow function.</p>
+    <p>The handling of this is also different in arrow functions compared to regular functions. In short, with arrow functions there are no binding of this. In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions the this keyword always represents the object that defined the arrow function.
+        arrow function newest feature introduced ES6 version of js ,to write simple and manageable that is easy to debud and understad.
+    </p>
+    <pre> Example:let test=(a,b)=>{
+        console.log(a+b)
+        console.log("hello")
+    }
+    test(12,24)</pre>
+    <h2>4.What is a Temporal Dead Zone?</h2>
+    <p>Ans:If you are  accessing any variable before delcaring with the let and const keywords we will get"Cannot access 'b' before initialization"because the variables is in temporal dead zone.
+        To avoid TDZ ,try to access variable after its declaration and initialization. </p>
+    <pre>Example:console.log(c)
+        var c=14//undefined
+        
+        console.log(b)
+        let b=13//cannot access before initialization
+        
+        console.log(a)
+        const a=12;//cannot access before initialization</pre>
+    <h2>5.What is hoisting?</h2>
+    <p>Ans:Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration.</p>
+    <pre>Example:console.log(c)
+        var c=14//undefined
+        
+        console.log(b)
+        let b=13//cannot access before initialization
+        
+        console.log(a)
+        const a=12;//cannot access before initialization</pre>
+    <h2>6.What is the DOM?</h2>
+    <p>Ans:DOM stands for Document Object Model. It is a programming interface that allows us to create, change, or remove elements from the document. We can also add events to these elements to make our page more dynamic.</p>
+   <p>Example:let para=document.getElementById("change")
+    para.innerText="how are u Ramana"
+   para.style.color="pink"<span id="change">hello! Ramana
+   </span></p> 
+   <h2>7.Difference between undefined vs not defined vs NaN</h2>
+   <p>Ans:An undefined variable or anything without a value will always return "undefined" in JavaScript. </p>
+   <p>A not defined is a variable which is not declared at a given point of time with declaration keyword like var, let or const.</p>
+   <p> NaN is a JavaScript property, which is "Not-a-Number" value. This shows it is not a legal number. Syntax Here's the syntax -Number.</p>
+   <pre>Example:console.log(a)
+    var a=21//undefined
+    
+    console.log(b)//not defined
+    
+    console.log(undefined*2)//NaN</pre>
+    <script src="./index.js"></script>
+</body>
+</html>
