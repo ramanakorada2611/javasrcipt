@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            background-color: aqua;
+        }
+        h2{
+            color: aqua;
+        }
+        p{
+         color:rgb(4, 137, 4);
+        }pre{
+            color:crimson
+        }
+    </style>
+</head>
+<body>
+    <h1><center>DAY4</center></h1>
+    <h2>1.How many operators do we have in JS ?</h2>
+    <p>Ans:There are six operators in java script. </p>
+    <p> 1. Assignment Operators<br>
+        2. Arithmetic Operators<br>
+        3. Bitwise Operators<br>
+        4. Logical Operators<br>
+        5. Comparision Operators<br>
+        6. Conditional Operators</p>
+    <h2>2.What are pure functions?</h2>
+    <p>Ans:A pure function is a deterministic function. This means when a same input is passed every time, the function will return same output. In mathematical terms it is nothing but a well defined function.</p>
+    <ul><li>
+        It depends only on its own arguments.
+    </li>
+    <li>
+        It wont try to change variables out of its scope.
+    </li>
+    <li>
+        It doesn't produce any side effects
+    </li>
+    </ul>
+    <pre>
+        Example:function pure(b){
+            let a=3
+            return  a*b
+        }
+        console.log(pure(4))
+    </pre>
+    <h2>3.What is callback hell?</h2>
+    <p>Ans:A callback is just a regular function, which is called after another function has finished executing.
+        Callback hell is a function that will be executed after execution of its parent function is executed completely.
+        It is also form pyramid like structure that is difficult to understand and debug.
+        We should avoid using callback hell as much as possible.
+    </p>
+    <pre>Example:
+        setTimeout((a,b) => {
+            console.log(a+b)
+            setTimeout(() => {
+                console.log(2)
+                setTimeout(() => {
+                    console.log(3)
+                    setTimeout(() => {
+                        console.log(4)
+                    }, 4000);
+                }, 3000);
+            },2000);
+        }, 1000,0,1);
+    </pre>
+   <h2>4.What are promises and why do we need them?</h2>
+   <p>Ans: Promises is like heaven for callback.It is introduced in ES6 version to handle assynchronous operation in an efficient way.
+    To debug and manage code we need promises.
+    Promises allows us to write cleaner code and allows error to pass down the chain and can be handled in a common place.
+</p>
+   <p>Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code. Prior to promises events and callback functions were used but they had limited functionalities and created unmanageable code.</p>
+   <pre>Examole:let p=new Promise((reslove,reject)=>{
+    let x=2;
+    let y=3;
+    if(x==y){
+       reslove("same")
+    }else{
+       reject('not same')
+    }
+   })
+    let fun1=(data)=>{console.log(data)}
+    let fun2=(data)=>{console.log(data)}
+    p.then(fun1).catch(fun2)</pre>
+<h2>5.What is promise chaining</h2>
+<p>Ans:Promise chaining: Promise chaining is a syntax that allows you to chain together multiple asynchronous tasks in a specific order. This is great for complex code where one asynchronous task needs to be performed after the completion of a different asynchronous task.</p>
+<h2>6.Give an example of async/await</h2>
+<pre>Ans:async function promise(){
+    let x=new Promise((resolve,reject)=>{
+       let a=9;
+       let b=10;
+        if(a==b)
+        {
+            resolve('same')
+        }else{
+            reject('not same')
+        }
+    })
+    let fun1=(data)=>{console.log(data)}
+    let fun2=(data)=>{console.log(data)}
+     await x.then(fun1).catch(fun2)
+     console.log('Hello!')
+    }
+     promise()</pre>
+     <h2>7.What is the purpose of async/await keywords?</h2>
+     <p>Ans:The keyword await makes JavaScript wait until that promise settles and returns its result.
+        The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. Async functions may also be defined as expressions.
+     </p>
+    <script src="./script.js"></script>
+</body>
+</html>
