@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5</title>
+    <style>
+        body{
+background-color:rgb(237, 178, 190)
+        }
+        h1{
+            color:aqua;
+            background-color: black;
+        }
+        p{
+            color:rgb(11, 86, 86)
+        }
+        pre{
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>DAY5</center></h1>
+    <h2>1.What is the for-in loop in JavaScript? Give its syntax</h2>
+    <p>Ans:The for..in loop in JavaScript allows you to iterate over all property keys of an object. JavaScript for...in loop The syntax of the for...in loop is: for (key in object) { // body of for...in } In each iteration of the loop, a key is assigned to the key variable. The loop continues for all object properties.
+        <pre>syntax:for(let i in obj){
+   
+        }
+Example:
+    let obj={
+        name:'ramana',
+        rollno:'18nu1a0462'
+    }
+    for(let i in obj){
+       console.log(i)
+    }</pre>
+    </p>
+    <h2>2.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript</h2>
+    <p>Ans:Local scope or block scope in JS means the variable declared within {}, if, switch, loops then it can only be accessed inside that block and not outside it.
+        Functional scope is name as local scope, the only difference is that the variable is defined inside a function.
+        Scope chain means the variables of the lexical parent can be accessed inside a block/function.</p>
+        <h2>3.What is difference between null and undefined and where to use what?</h2>
+        <p>Ans:Null and undefined are primitive data types. Null is like a keyword that is programmatically empty and undefined is a keyword that will be getting if you are accessing variables before initialisation.
+
+            undefined is the default value before initialisation while null is a specified value as 'nothing' by the developer.</p>
+        <h2>4.what is Symbol?</h2>
+        <p>Ans:Symbol is primitive data type introduced in ES6 version of JS. They are immutable i.e which cannot be changed and  it is unique. it is based on boolean values(true,false).
+<pre>
+            //Symbol example
+            const val = Symbol(1);
+            const val2 = Symbol(1);
+            console.log(val == val2);
+        </pre></p>
+        <h2>5.Write code to explain map and filter in arrays</h2>
+        <p>Ans:Map will iterate over all the elements on which it has been used, it will return a new array.
+
+            Filter will return a new array after checking a condition on each element of the old array.
+               <pre>
+                    // Map & filter example
+                    let result = arr.map((val, index) => {
+                        return val+index;
+                    })
+                    console.log(result);
+            
+                    let result2 = arr.filter((val, index) => {
+                        return (val%3 == 0);
+                    })
+                    console.log(result2)</pre>
+                    <h2>6.Explain passed by value and passed by reference</h2>
+                    <p>Ans:Passed by value works with primitive data types. It means that every time we assign a value to a variable a copy of that variable is created every single time.
+
+                        passed by reference works with non-primitive data types. When you are creating an object you're given a reference to that object, if 2 variables hold the same reference, then changing the object reflects in both variable.
+                        <pre>
+                                
+                                //passed by value example
+                                let a = 10;
+                                let b = a;
+                                b = a + 5;
+                                console.log(a, b);
+                        
+                                //passed by reference example
+                                let obj1 = {
+                                    name: 'Logan',
+                                    jerseyNo: 23
+                                }
+                                let obj2 = obj1;
+                        
+                                obj2.jerseyNo = 10;
+                                console.log(obj1);
+                                console.log(obj2);</pre>
+                        </p>
+                        <h2>7.Please explain Self Invoking Function and its code</h2>
+                        <p>Ans:It is also called 'immediately invoked function' and it has been introduced in ES6 version of JS. It should be called just after its declaration so that it doesn't pollutes the outer scope.</p>
+
+                            <pre>
+                                (function()
+                                {
+                                console.log("self invoked")
+                            })()</pre>
+    <script src="./script.js"></script>
+</body>
+</html>
