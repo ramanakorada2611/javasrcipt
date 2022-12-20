@@ -5,72 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-    <p>1.Find the Smaller Angle</p>
-    <pre>var Minimal_Angle = (h, m) => 
-        {
-          let degree_per_minute=360/60;
-          let degree_per_hour=360/12;
-          let a=h*degree_per_hour+m*0.5;//hours
-          let b=m*degree_per_minute//mins
-          let angle=Math.abs(a-b);
-          return Math.min(angle,360-angle)
-        };</pre>
-    <p>2.Check whether the year is Leap year or not.</p>
-    <pre>var Check_Leap = (year) => 
-        {
-         
-          if ( year%400 == 0){   
-              return "Leap Year";  
-            } 
-            else if ( year%100 == 0){    
-            return " Non Leap Year";  
-            }  
-            else if( year%4 == 0 ) {   
-             return "Leap Year";  
-            }
-            else  {    
-             return "Non Leap Year";      
-        }
-        };</pre>
-    <p>3.Perfect Number Check</p>
-    <pre>var Perfect_Check = (N) => 
-        {
-          let sum=1;
-            for(let i=1;i < N;i++) {
-              if(N%i == 0)
-              {
-                sum+=i
-              }
-            }if (N == sum){
-              return "YES"
-            }else {
-              return "NO"
-            }    
-        };
-    </pre>
-    <p>4.Reverse a Number</p>
-    <pre>var Reverse_Number = (N) => 
-        {
-          let digit=0;
-          let reverse=0;
-          while(N!=0){
-            digit=N%10;
-            N=parseInt(N/10);
-            reverse=reverse*10+digit;
-          }
-        return reverse
-        };</pre>
-        <p>5.Substring Check.</p>
-        <pre>var Substring_Check = (S1, S2) => 
-            {
-               let x=(S1.includes(S2));
-               if(x==true){
-                 return "YES"
-               }else{
-                 return "NO"
-               }
-            };</pre>
+    <h1>Guess My Number!</h1>
+    <p class="between">< Between 1 to 20></p>
+    <button class="top">Again!</button>
+    <hr/>
+    <div class="center-box">?</div>
+    <input type="text" name="check" id="data" placeholder="Enter number"/>
+    <button id="check" onclick="game()">Check!</button>
+    <p id="guess">Start Guessing....🤔</p>
+    <p id="score">Score💯</p>
+    <p id="highscore">HighScore🎖️</p>
+    <script src="./index.js"></script>
 </body>
 </html>
